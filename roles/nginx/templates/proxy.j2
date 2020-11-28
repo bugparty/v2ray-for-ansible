@@ -23,8 +23,12 @@ server {
 
     access_log /var/log/nginx/{{ domains.proxy.to }}_access.log;
     error_log /var/log/nginx/{{ domains.proxy.to }}_error.log warn;
-
     location / {
+        root /usr/share/nginx/html;
+        index index.htm index.html;
+    }
+
+    location /ws2/ {
         proxy_pass http://{{ srv_name }}_backend;
         proxy_http_version 1.1;
         proxy_redirect off;
