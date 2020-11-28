@@ -27,6 +27,7 @@
       private: no
 
   roles:
+    - bootstrap
     - role: certbot
       email: "{{ email_addr }}"
       domains:

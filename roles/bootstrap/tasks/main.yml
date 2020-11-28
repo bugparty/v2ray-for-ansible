@@ -1,0 +1,8 @@
+---
+- import_tasks: centos.yml
+  when: ansible_distribution == "CentOS"
+  
+- name: Install package
+  package:
+    name: unzip
+    state: present
