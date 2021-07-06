@@ -1,2 +1,2 @@
 [selfhost]
-localhost
+bwgus ansible_port=19323 ansible_host=156.96.106.4
