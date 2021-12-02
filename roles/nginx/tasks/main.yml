@@ -4,6 +4,8 @@
 
 - import_tasks: centos.yml
   when: ansible_distribution == "CentOS"
+- import_tasks: oracle.yml
+  when: ansible_distribution == "OracleLinux"
 
 - name: Install package
   package:
