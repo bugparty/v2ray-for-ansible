@@ -25,6 +25,11 @@ GNU/Linux 10 上测试通过。Debian GNU/Linux 更低版本或 Ubuntu
 
         $ echo 'your.ip.address' >> inventory/selfhost
 
+2. 安装ansible插件
+ 
+        $ ansible-galaxy collection install ansible.posix
+ 
+
 2. 执行 Playbook 并按提示操作：
 
         $ ansible-playbook v2ray.yml

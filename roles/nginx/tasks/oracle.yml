@@ -8,3 +8,9 @@
 - name: Set nginx user
   set_fact:
     nginx_user: nginx
+
+# - name: Set httpd_can_network_connect flag on and keep it persistent across reboots
+#   ansible.posix.setboolean:
+#     name: httpd_can_network_connect
+#     state: yes
+#     persistent: yes

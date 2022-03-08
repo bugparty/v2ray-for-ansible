@@ -1,9 +1,8 @@
 ---
-
-- name: Install package
-  package:
-    name: certbot
-    state: present
+- import_tasks: ubuntu20.yml
+  when: ansible_os_family == "Ubuntu"
+- import_tasks: generic_install.yml
+  when: ansible_os_family != "Ubuntu"
 
 - name: Generate config
   template:
