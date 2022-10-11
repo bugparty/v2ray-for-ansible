@@ -9,7 +9,7 @@
   vars_prompt:
     - name: v2ray_ver
       prompt: "V2Ray version"
-      default: "4.42.2"
+      default: "4.45.2"
       private: no
     - name: v2ray_arch
       prompt: "V2Ray arch"
