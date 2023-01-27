@@ -1,12 +1,10 @@
 ---
 - name: Bbr
-  hosts: selfhost
-  gather_facts: true
-  become: true
+  hosts: bwg2
 
   vars:
 
   vars_prompt:
 
   roles:
-    - bbr
+    - linuxhq.tcp_bbr
