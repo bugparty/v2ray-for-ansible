@@ -1,6 +1,7 @@
 ---
 - import_tasks: ubuntu20.yml
-  when: ansible_os_family == "Ubuntu"
+  when: ansible_os_family == "Ubuntu"  or
+     ansible_distribution_major_version >= 8 and ansible_os_family == "RedHat"
 - import_tasks: generic_install.yml
   when: ansible_os_family != "Ubuntu"
 

@@ -2,3 +2,5 @@
   community.general.snap:
     name:
       - certbot
+    classic: true
+    

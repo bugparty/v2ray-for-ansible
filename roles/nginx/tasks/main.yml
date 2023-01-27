@@ -5,7 +5,8 @@
   when: ansible_os_family == "Ubuntu"
 
 - import_tasks: centos.yml
-  when: ansible_distribution == "CentOS"
+  when: ansible_distribution == "CentOS" or
+        ansible_distribution == "AlmaLinux"
 - import_tasks: oracle.yml
   when: ansible_distribution == "OracleLinux"
 

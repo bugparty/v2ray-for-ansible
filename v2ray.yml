@@ -19,7 +19,7 @@
       private: no
     - name: v2ray_ver
       prompt: "V2Ray version"
-      default: "4.39.2"
+      default: "4.45.2"
       private: no
     - name: v2ray_arch
       prompt: "V2Ray arch"
@@ -28,6 +28,7 @@
 
   roles:
     - bootstrap
+    - professormanhattan.snapd
     - role: certbot
       email: "{{ email_addr }}"
       domains:
