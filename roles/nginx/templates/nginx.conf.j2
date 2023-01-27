@@ -23,7 +23,10 @@ http {
     client_max_body_size 512m;
 
     # Enable asynchronous file I/O
-    aio threads;
+   
+    {% if ansible_distribution != "CentOS" %}
+ aio threads;
+{% endif %}
 
     include /etc/nginx/mime.types;
     default_type application/octet-stream;
